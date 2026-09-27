@@ -1,0 +1,53 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Pontos Flutuantes}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sistemas de Numeração}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Aritmética de Ponto Flutuante}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Representação de Números Reais em Sistemas de Ponto Flutuante}{4}{subsection.2.2.1}%
+\contentsline {subsubsection}{Representação Especial do Zero e Subnormais}{6}{section*.9}%
+\contentsline {subsection}{\numberline {2.2.2}Representação de Pontos Flutuantes em Computadores (Padrão IEEE 754)}{7}{subsection.2.2.2}%
+\contentsline {subsubsection}{Estrutura de um Número de Ponto Flutuante no padrão IEEE 754}{8}{section*.11}%
+\contentsline {subsubsection}{Nível de Precisão de um Sistema de Ponto Flutuante}{8}{section*.12}%
+\contentsline {section}{\numberline {2.3}Erros e Limitações}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Erro Absoluto e Relativo}{10}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Perda de Significância em Operações com Pontos Flutuantes}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Análise de Instabilidades e Casos Peculiares}{13}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Units in Last Place (ULP's)}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Imprecisão de operações em Sistemas de Ponto flutuante}{16}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Discussão}{19}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {3}Métodos Iterativos para Zeros de Função}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Localização de Raízes}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Critério de Parada}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Método do Ponto Fixo}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Ordem de convergência}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementações do Método do Ponto Fixo}{27}{subsection.3.3.2}%
+\contentsline {subsubsection}{Imperativa}{27}{section*.30}%
+\contentsline {subsubsection}{Funcional}{28}{section*.31}%
+\contentsline {section}{\numberline {3.4}Método de Newton-Raphson Unidimensional}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Sequência Iterativa}{29}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Interpretação Geométrica}{29}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Convergência}{30}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Ordem de Convergência}{30}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Implementações do Método de Newton-Raphson Unidimensional}{32}{subsection.3.4.5}%
+\contentsline {subsubsection}{Imperativa}{32}{section*.39}%
+\contentsline {subsubsection}{Funcional}{33}{section*.40}%
+\contentsline {subsection}{\numberline {3.4.6}Casos Atípicos}{33}{subsection.3.4.6}%
+\contentsline {subsubsection}{Caso 1: Alta multiplicidade de raízes}{33}{section*.41}%
+\contentsline {subsubsection}{Caso 2: Proximidade a extremos de função}{35}{section*.43}%
+\contentsline {subsubsection}{Caso 3: Proximidade a Pontos de Inflexão}{39}{section*.46}%
+\contentsline {subsubsection}{Caso 4: Derivada próxima de zero}{41}{section*.48}%
+\contentsline {section}{\numberline {3.5}Método de Newton-Raphson N-dimensional}{42}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Definições}{43}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Calculo do Jacobiano}{44}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Números Complexos e Plano Complexo}{48}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Fractais de Newton}{50}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Problemas de Valor Inicial para Equações Diferenciais Ordinárias}{62}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Equações Diferenciais Ordinárias}{62}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Definição de Problema de Valor Inicial}{63}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Métodos Numéricos para Resolver PVIs}{64}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Teorema de Existência e Unicidade}{64}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Boa Colocação do PVI}{65}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Método de Euler}{66}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Comparação entre Paradigmas de Programação}{67}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparação Entre Paradigmas}{68}{section.5.1}%
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{80}{chapter*.77}%

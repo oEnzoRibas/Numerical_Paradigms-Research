@@ -1,24 +1,7 @@
 {
   "latex-workshop.latex.outDir": "%DIR%/build",
+
   "latex-workshop.latex.tools": [
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-output-directory=%OUTDIR%",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "bibtex",
-      "command": "bibtex",
-      "args": [
-        "%OUTDIR%/%DOCFILE%"
-      ]
-    },
     {
       "name": "latexmk",
       "command": "latexmk",
@@ -28,21 +11,12 @@
         "-file-line-error",
         "-pdf",
         "-outdir=%OUTDIR%",
-        "-bibtex-",
         "%DOC%"
       ]
     }
   ],
+
   "latex-workshop.latex.recipes": [
-    {
-      "name": "pdflatex -> bibtex -> pdflatex x2",
-      "tools": [
-        "pdflatex",
-        "bibtex",
-        "pdflatex",
-        "pdflatex"
-      ]
-    },
     {
       "name": "latexmk",
       "tools": [
@@ -50,110 +24,13 @@
       ]
     }
   ],
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "*.cpp": "default"
-  },
-  "security.workspace.trust.untrustedFiles": "open",
-  "lldb.suppressUpdateNotifications": true,
-  "git.openRepositoryInParentFolders": "always",
-  "redhat.telemetry.enabled": true,
-  "explorer.confirmDelete": false,
-  "python.defaultInterpreterPath": "C:\\Users\\maria\\AppData\\Local\\Microsoft\\WindowsApps\\python3.7.exe",
-  "workbench.colorTheme": "Dark 2026",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false,
-    "c": false,
-    "latex": true
-  },
-  "git.autofetch": true,
-  "haskell.manageHLS": "GHCup",
-  "explorer.confirmDragAndDrop": false,
-  "editor.pasteAs.preferences": [],
-  "markdown-preview-enhanced.mermaidTheme": "dark",
-  "markdown-preview-enhanced.revealjsTheme": "moon.css",
-  "markdown-preview-enhanced.wikiLinkTargetFileNameChangeCase": "camelCase",
-  "markdown-pdf.breaks": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "workbench.settings.applyToAllProfiles": [
-    "editor.wordWrap"
-  ],
-  "editor.wordWrap": "on",
-  "settingsSync.ignoredExtensions": [],
-  "explorer.confirmPasteNative": false,
-  "remote.SSH.remotePlatform": {
-    "KitanaDebian": "linux",
-    "sandbox.464xyj.csb": "linux"
-  },
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.formatOnSave": true,
-  "editor.tabSize": 4,
-  "editor.insertSpaces": true,
-  "csharp.format.enable": true,
-  "csharp.referencesCodeLens.enabled": true,
-  "csharp.testsCodeLens.enabled": false,
-  "files.exclude": {
-    "**/*.meta": true,
-    "**/Library": true,
-    "**/Temp": true
-  },
-  "omnisharp.useModernNet": true,
-  "omnisharp.enableRoslynAnalyzers": true,
-  "todohighlight.keywords": [
-    {
-      "text": "TODO",
-      "color": "#ffdc54",
-      "backgroundColor": "#ffdc0050"
-    },
-    {
-      "text": "FIXME",
-      "color": "#ffa254",
-      "backgroundColor": "#FF572250"
-    },
-    {
-      "text": "NOTE",
-      "color": "#00ff26",
-      "backgroundColor": "#00842650"
-    },
-    {
-      "text": "HACK",
-      "color": "#b50d8f",
-      "backgroundColor": "#6f0dcd50"
-    },
-    {
-      "text": "BUG",
-      "color": "#f33548",
-      "backgroundColor": "#76000050"
-    },
-    {
-      "text": "@LucasM",
-      "color": "#a700ff",
-      "backgroundColor": "transparent"
-    },
-    {
-      "text": "@EnzoR",
-      "color": "#a700ff",
-      "backgroundColor": "transparent"
-    },
-    {
-      "text": "@DanielP",
-      "color": "#a700ff",
-      "backgroundColor": "transparent"
-    },
-    {
-      "text": "@LuisD",
-      "color": "#a700ff",
-      "backgroundColor": "transparent"
-    }
-  ],
+
+  "latex-workshop.latex.recipe.default": "first",
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.synctex.afterBuild.enabled": true,
   "latex-workshop.message.update.show": false,
+
   "terminal.integrated.env.windows": {
     "PATH": "C:\\Strawberry\\perl\\bin;${env:PATH}"
   }

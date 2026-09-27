@@ -1,0 +1,243 @@
+\section{Relatório Final -- SIGAA}
+\label{cap:Relatorio_Final_SIGAA}
+
+Relatório submetido no SIGAA ao final do projeto.
+Apenas texto simples pode ser utilizado para responder a estes campos.
+
+\subsection{Resumo}
+
+\subsubsection{Resumo}
+
+Este trabalho investiga a implementação de métodos numéricos em diferentes
+paradigmas de programação, com foco na comparação entre uma linguagem
+multiparadigma, Python, e uma linguagem funcional pura, Haskell. Foram
+implementados métodos clássicos de cálculo numérico, incluindo o método do
+ponto fixo, o método de Newton--Raphson e o método de Euler. As implementações
+foram avaliadas quanto à complexidade algorítmica, legibilidade, capacidade de
+abstração, precisão dos resultados e desempenho computacional, estabelecendo
+métricas comparativas entre os paradigmas funcional e imperativo.
+
+Os resultados evidenciam diferenças significativas na organização estrutural
+do código, no tratamento de estados e efeitos colaterais, bem como na
+expressividade das abstrações matemáticas. Observou-se que o paradigma
+funcional favorece maior modularidade e aproximação conceitual com a formulação
+matemática dos métodos, enquanto o paradigma imperativo apresenta vantagens
+práticas relacionadas à familiaridade e controle explícito de fluxo. A
+pesquisa contribui para a análise crítica da adequação de paradigmas de
+programação no desenvolvimento de aplicações científicas e numéricas.
+
+\noindent
+\textbf{Palavras-chave:} Métodos Numéricos; Paradigmas de Programação;
+Programação Funcional.
+
+\subsubsection{Abstract}
+
+\noindent
+\textbf{Title:} Numerical Methods Implementation Comparison in Different
+Programming Paradigms.
+
+\vspace{0.5em}
+
+This work investigates the implementation of numerical methods across
+different programming paradigms, focusing on a comparison between a
+multiparadigm language, Python, and a purely functional language, Haskell.
+Classical numerical analysis methods were implemented, including the
+Fixed-Point Method, the Newton--Raphson Method, and Euler's Method. The
+implementations were evaluated in terms of algorithmic complexity, readability,
+abstraction capability, result accuracy, and computational performance,
+establishing comparative metrics between the functional and imperative
+paradigms.
+
+The results reveal significant differences in code structure, state management,
+and handling of side effects, as well as in the expressiveness of mathematical
+abstractions. The functional paradigm demonstrated greater modularity and
+closer conceptual alignment with the mathematical formulation of the methods,
+whereas the imperative paradigm showed practical advantages related to
+familiarity and explicit flow control. This research contributes to a critical
+analysis of the suitability of programming paradigms for scientific and
+numerical computing applications.
+
+\noindent
+\textbf{Keywords:} Numerical Methods; Programming Paradigms; Functional
+Programming.
+
+\subsection{Introdução}
+
+A crescente demanda por desempenho e confiabilidade em aplicações científicas
+e computacionais tem ampliado o interesse na escolha adequada de paradigmas de
+programação para implementação de algoritmos matemáticos. Métodos numéricos
+constituem a base de diversas áreas da engenharia e da ciência da computação,
+sendo amplamente utilizados na resolução de equações não lineares, modelagem
+de sistemas dinâmicos e aproximação de soluções analíticas. Tradicionalmente,
+tais métodos são implementados em linguagens de paradigma imperativo, devido
+ao controle explícito de estado e fluxo de execução que esse modelo oferece.
+
+Entretanto, o avanço das linguagens funcionais e multiparadigma tem levantado
+questionamentos sobre sua adequação para aplicações numéricas. O paradigma
+funcional, fundamentado em conceitos como funções puras, imutabilidade e
+composição de funções, aproxima-se conceitualmente da formalização matemática
+dos algoritmos, o que pode favorecer maior clareza e modularidade. Por outro
+lado, há debates na literatura acerca de possíveis impactos no desempenho
+computacional e na eficiência de memória quando comparado ao modelo imperativo
+tradicional.
+
+A literatura clássica de Análise Numérica, representada por autores como
+Márcia Ruggiero, Steven C. Chapra, Richard L. Burden e J. Douglas Faires,
+enfatiza aspectos como convergência, estabilidade, erro de truncamento e
+eficiência computacional na implementação de métodos iterativos. Esses
+critérios são centrais para avaliar não apenas o método matemático em si, mas
+também sua realização computacional concreta.
+
+Diante desse contexto, este trabalho tem como objetivo investigar a
+implementação de métodos numéricos clássicos em dois paradigmas distintos,
+utilizando Python, linguagem multiparadigma amplamente empregada em computação
+científica, e Haskell, linguagem funcional pura. Busca-se analisar diferenças
+estruturais, expressividade algorítmica, tratamento de estados e desempenho
+computacional, contribuindo para uma compreensão mais aprofundada da adequação
+de diferentes paradigmas no desenvolvimento de aplicações científicas e
+numéricas.
+
+\subsection{Metodologia}
+
+O estudo foi conduzido em ambiente computacional controlado, utilizando um
+computador com sistema operacional Windows 10, processador AMD Ryzen 5 3600X,
+32 GB de memória RAM e GPU NVIDIA RTX 2060. As implementações em Python foram
+desenvolvidas na versão 3.13, enquanto as implementações em Haskell foram
+compiladas utilizando a versão mais recente do compilador GHC disponível em
+2025.
+
+No caso do Haskell, foram avaliados diferentes níveis de otimização do
+compilador, variando desde ausência de otimização até o nível máximo
+(\texttt{-O3}), com o objetivo de analisar o impacto das otimizações no
+desempenho dos métodos numéricos. Em Python, foram utilizados recursos da
+biblioteca padrão e bibliotecas científicas amplamente empregadas em computação
+numérica, incluindo NumPy para operações vetoriais, Pandas para organização dos
+dados experimentais e Matplotlib para visualização gráfica dos resultados. Em
+Haskell, as implementações foram realizadas utilizando apenas a Prelude padrão,
+sem dependência de bibliotecas matemáticas externas.
+
+Foram implementados o Método do Ponto Fixo e o Método de Newton--Raphson, com
+foco na análise de comportamento iterativo, convergência e desempenho
+computacional. O Método de Euler foi desenvolvido, mas não constituiu o foco
+central das análises comparativas. Para os métodos iterativos, foram adotados
+critérios de parada baseados em tolerância numérica, utilizando
+$10^{-6}$ como valor padrão e, em determinados experimentos, $10^{-3}$ para
+avaliação do impacto na convergência. O número máximo de iterações foi definido,
+na maioria dos testes, como 100 iterações, com variações controladas conforme a
+necessidade experimental.
+
+As implementações em ambas as linguagens mantiveram equivalência lógica,
+utilizando as mesmas funções de teste, valores iniciais e critérios de parada,
+garantindo comparabilidade direta entre os paradigmas funcional e imperativo.
+O desempenho foi avaliado por meio da medição do tempo de execução sob as
+mesmas condições de hardware e sistema operacional, considerando diferentes
+níveis de otimização no caso do Haskell.
+
+Foram realizadas múltiplas execuções para cada configuração experimental, com
+posterior organização e análise dos dados em Python. Além do tempo de execução,
+foram analisados aspectos estruturais do código, como legibilidade,
+modularidade, organização de funções e tratamento de estados, por meio de
+comparação qualitativa entre as implementações.
+
+Os experimentos foram conduzidos sob condições equivalentes de carga do
+sistema, buscando minimizar interferências externas. Os resultados foram
+organizados em tabelas e gráficos para permitir análise comparativa consistente.
+
+\subsection{Resultados e Discussões}
+
+Os experimentos evidenciaram diferenças mensuráveis entre as implementações
+realizadas em Python e Haskell, tanto no desempenho computacional quanto na
+organização estrutural do código. Em relação ao tempo de execução, observou-se
+que as versões compiladas em Haskell apresentaram desempenho significativamente
+influenciado pelo nível de otimização do compilador. Sem otimizações, o
+desempenho mostrou-se inferior ou comparável ao Python em determinados
+cenários. Entretanto, com níveis elevados de otimização
+(\texttt{-O2} e \texttt{-O3}), o tempo de execução apresentou redução
+consistente, evidenciando o impacto direto da etapa de compilação na eficiência
+final.
+
+No caso do Python, o uso de bibliotecas como NumPy contribuiu para melhorar o
+desempenho em operações numéricas vetorizadas, reduzindo parte da desvantagem
+inerente à interpretação da linguagem. Ainda assim, a execução permaneceu
+dependente do ambiente interpretado e do gerenciamento dinâmico de tipos, o que
+impactou o tempo total de processamento em iterações mais intensivas.
+
+Quanto à convergência dos métodos do Ponto Fixo e de Newton--Raphson, não foram
+observadas diferenças matemáticas entre as linguagens, uma vez que os critérios
+de parada, tolerâncias e funções testadas foram mantidos equivalentes. Os
+resultados numéricos apresentaram precisão compatível com os valores esperados
+na literatura clássica de Análise Numérica, conforme descrito por Steven C.
+Chapra e Richard L. Burden, confirmando a correção algorítmica das
+implementações.
+
+Do ponto de vista estrutural, a implementação em Haskell demonstrou maior
+modularidade e proximidade conceitual com a formulação matemática dos métodos.
+A ausência de estado mutável e a utilização de funções puras favoreceram uma
+organização mais declarativa. Esse resultado está alinhado com as discussões
+sobre programação funcional apresentadas por John Hughes, que destaca a
+clareza e composição funcional como vantagens estruturais do paradigma.
+
+Por outro lado, a implementação em Python mostrou-se mais direta em termos de
+fluxo de controle explícito e manipulação iterativa, especialmente para
+usuários já familiarizados com o paradigma imperativo. A legibilidade, nesse
+caso, esteve fortemente associada à experiência prévia do programador,
+sugerindo que fatores humanos também influenciam a percepção de clareza do
+código.
+
+A análise comparativa indica que o paradigma funcional oferece vantagens
+conceituais e estruturais, especialmente na representação formal de algoritmos
+matemáticos. Contudo, o desempenho prático depende fortemente do modelo de
+execução e das otimizações aplicadas. Já o paradigma imperativo, especialmente
+quando combinado com bibliotecas otimizadas, mantém competitividade em
+aplicações numéricas.
+
+Esses resultados reforçam a ideia de que a escolha do paradigma não deve ser
+ideológica, mas orientada pelo contexto da aplicação, requisitos de desempenho
+e objetivos do projeto. A literatura de métodos numéricos enfatiza precisão e
+estabilidade; este estudo acrescenta que a forma como o algoritmo é estruturado
+também impacta a experiência de desenvolvimento e potencial manutenção futura.
+
+
+\subsection{Conclusões}
+
+Este estudo analisou a implementação de métodos numéricos clássicos sob dois
+paradigmas de programação distintos, utilizando Python como linguagem
+multiparadigma e Haskell como linguagem funcional pura. Os resultados
+demonstraram que, do ponto de vista matemático, ambos os paradigmas são
+igualmente capazes de produzir soluções corretas e precisas quando mantidos os
+mesmos critérios de parada, tolerância e condições iniciais.
+
+Entretanto, diferenças relevantes foram observadas na organização estrutural
+do código e no desempenho computacional. O paradigma funcional evidenciou maior
+proximidade conceitual com a formulação matemática dos algoritmos, favorecendo
+modularidade e clareza declarativa. Por outro lado, o paradigma imperativo
+mostrou-se competitivo em termos práticos, especialmente quando apoiado por
+bibliotecas numéricas otimizadas. No caso do Haskell, verificou-se que o
+desempenho depende significativamente do nível de otimização aplicado durante a
+compilação.
+
+Conclui-se que a escolha do paradigma de programação para aplicações numéricas
+deve considerar não apenas desempenho bruto, mas também aspectos como
+manutenção, legibilidade, abstração e contexto do projeto. Não há superioridade
+absoluta entre paradigmas, mas adequação ao problema proposto.
+
+Como continuidade, recomenda-se a ampliação do estudo para métodos numéricos de
+maior complexidade, como técnicas de integração de ordem superior ou métodos
+para sistemas de equações diferenciais, bem como a inclusão de métricas
+adicionais, como consumo de memória e análise formal de complexidade. Também
+seria relevante investigar o impacto de bibliotecas funcionais especializadas
+em Haskell, comparando-as com frameworks científicos consolidados em Python.
+
+\subsection{Referências}
+
+RUGGIERO, Márcia A. G.; LOPES, Vera L. R.
+\textit{Cálculo numérico: aspectos teóricos e computacionais}.
+2. ed. São Paulo: Pearson Education do Brasil, 1996.
+
+CHAPRA, Steven C.; CANALE, Raymond P.
+\textit{Métodos numéricos para engenharia}.
+7. ed. Porto Alegre: AMGH, 2016.
+
+BURDEN, Richard L.; FAIRES, J. Douglas.
+\textit{Análise numérica}.
+9. ed. São Paulo: Cengage Learning, 2011.
