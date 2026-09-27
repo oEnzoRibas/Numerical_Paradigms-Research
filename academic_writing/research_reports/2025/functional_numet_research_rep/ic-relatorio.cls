@@ -265,9 +265,9 @@
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
-\newcommand*{\TheUNI}       {CEFET-MG}
+\newcommand*{\TheUNI}       {UFCIMG}
 \newcommand*{\ThePlace}     {Belo Horizonte}
-\newcommand*{\TheUniversity}{Centro Federal de Educação Tecnológica de Minas Gerais}
+\newcommand*{\TheUniversity}{Federal University of Science and Technology of Minas Gerais}
 
 \newcommand{\@DrawUNILogo}
 {
@@ -463,7 +463,7 @@
   \exhyphenpenalty 10000
   \begin{center}
     % Instituição
-    \textsc{\TheUniversity \\[1mm] Relatório de Iniciação Científica} \\[9mm]
+    \textsc{\TheUniversity \\[1mm] Scientific Initiation Report} \\[9mm]
     \@DrawUNILogo
     % Título
     \vspace{20mm}

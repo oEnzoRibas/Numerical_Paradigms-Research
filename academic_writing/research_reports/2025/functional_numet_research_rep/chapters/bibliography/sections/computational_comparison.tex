@@ -1,0 +1,77 @@
+\section{Computational Comparison Between Programming Paradigms}
+
+The comparison between programming paradigms cannot be reduced solely to the
+execution time of a program. A meaningful analysis must consider multiple
+dimensions of software and computational behavior.
+
+In this work, the comparison includes both quantitative and qualitative
+criteria.
+
+The quantitative metrics considered include:
+
+\begin{itemize}
+    \item execution time;
+    \item memory usage;
+    \item computational resource usage;
+    \item number of iterations;
+    \item implementation size;
+    \item influence of compiler optimization.
+\end{itemize}
+
+The qualitative characteristics considered include:
+
+\begin{itemize}
+    \item readability;
+    \item modularity;
+    \item expressiveness;
+    \item maintainability;
+    \item correspondence between the mathematical formulation and its
+    computational implementation.
+\end{itemize}
+
+The comparison must also account for the fact that C, Python, and Haskell
+possess substantially different execution models.
+
+C is generally compiled ahead of time into machine code and provides relatively
+direct control over memory organization, data representation, and low-level
+operations \cite{kernighan1988c}.
+
+Python, in its most widely used implementation, CPython, compiles source code
+into bytecode executed by the Python virtual machine. At the same time,
+performance-critical scientific operations are frequently delegated to native
+compiled libraries. This distinction is especially relevant in numerical
+computing, where libraries such as NumPy provide optimized array operations
+implemented largely outside ordinary Python execution
+\cite{harris2020array}.
+
+Haskell implementations such as the Glasgow Haskell Compiler typically compile
+programs to native code while preserving semantic properties associated with
+pure functional programming and non-strict evaluation. Consequently, the
+runtime behavior of Haskell differs substantially from that of both C and
+Python
+\cite{marlow2010haskell}.
+
+Experimental differences among implementations therefore cannot be attributed
+exclusively to the programming paradigm. Observed performance results emerge
+from the interaction among the numerical algorithm, programming paradigm,
+programming language, compiler or interpreter, runtime system, optimization
+strategies, memory representation, and hardware architecture.
+
+For this reason, the experiments conducted in this research attempt to keep
+external conditions constant whenever possible and explicitly document the
+tools, language versions, compiler versions, compiler optimization options,
+and hardware characteristics used during benchmarking.
+
+Such methodological control is necessary to reduce confounding factors and to
+avoid generalizing language-specific performance results into broader claims
+about entire programming paradigms.
+
+The objective of the experimental comparison is therefore not to determine an
+absolute superiority between imperative and functional programming. Instead,
+the purpose is to identify how their different computational models interact
+with the mathematical and iterative properties of numerical algorithms.
+
+This approach allows performance, memory behavior, implementation structure,
+and numerical characteristics to be analyzed together, providing a broader
+assessment of the consequences of programming-paradigm selection in scientific
+and numerical computing.

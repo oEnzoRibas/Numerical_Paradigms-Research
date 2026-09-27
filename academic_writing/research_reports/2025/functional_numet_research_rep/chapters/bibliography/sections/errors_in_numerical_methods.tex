@@ -1,0 +1,50 @@
+\section{Errors in Numerical Methods}
+
+A numerical solution is generally an approximation to an exact mathematical
+quantity. Consequently, the analysis of errors associated with numerical
+approximation is a fundamental component of numerical analysis
+\cite{burden2016numerical,chapra2021numerical}.
+
+Let $x$ denote the exact value of a quantity and $\tilde{x}$ a numerical
+approximation. The absolute error may be defined as
+
+\begin{equation}
+    E_a = |x-\tilde{x}|,
+\end{equation}
+
+while the relative error can be expressed as
+
+\begin{equation}
+    E_r =
+    \frac{|x-\tilde{x}|}{|x|},
+\end{equation}
+
+provided that $x \neq 0$.
+
+Relative error is particularly useful because it relates the magnitude of the
+approximation error to the magnitude of the quantity being approximated,
+providing a scale-independent measure of accuracy
+\cite{chapra2021numerical}.
+
+In many practical numerical problems, however, the exact value is not known.
+In such cases, stopping criteria based on successive approximations may be
+used.
+
+A common criterion consists of terminating the iterative procedure when
+
+\begin{equation}
+    |x_{n+1}-x_n| < \varepsilon,
+\end{equation}
+
+where $\varepsilon$ represents a predetermined tolerance.
+
+The selection of the tolerance directly affects the computational behavior of
+the algorithm. A relatively large tolerance may result in premature
+termination, while an excessively small tolerance may increase the number of
+iterations without necessarily producing a proportional improvement in
+accuracy.
+
+This limitation becomes especially important in finite-precision computation,
+where the accuracy obtainable from an algorithm is ultimately constrained by
+the arithmetic used by the machine
+\cite{higham2002accuracy}.

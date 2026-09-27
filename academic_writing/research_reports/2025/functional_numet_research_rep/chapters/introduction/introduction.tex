@@ -1,17 +1,273 @@
-\chapter{Introdução}
-\label{cap:Introducao}
+\chapter{Introduction}
+\label{cap:Introduction}
 
-Qual o problema com que estamos trabalhando?
+Numerical methods constitute a fundamental area of Applied Mathematics and
+Scientific Computing, providing techniques for obtaining approximate solutions
+to mathematical problems for which analytical solutions are unavailable,
+unknown, or computationally impractical. Problems involving roots of nonlinear
+equations, systems of equations, numerical integration, interpolation, and
+differential equations are commonly encountered in engineering, physics,
+computer science, and mathematical modeling
+\cite{burden2016numerical,chapra2021numerical}.
 
-\chapter{Levantamento Bibliográfico}
-\label{cap:Levantamento_Bibliografico}
+Although numerical methods are defined through mathematical formulations,
+their practical application depends directly on computational implementation.
+Consequently, several computational aspects can influence their behavior,
+including the programming language, programming paradigm, control structures,
+numerical representation, compiler or interpreter, and the limitations
+inherent to finite-precision arithmetic
+\cite{higham2002accuracy}.
 
-A bibliografia apresentada na proposta do projeto é:
-\cite{KLETTE:Concise_computer_vision},
-\cite{FORSYTH:Computer_vision},
-\cite{SZELISKI:Computer_vision},
-\cite{PRINCE:Computer_vision},
-\cite{DAVIES:Computer_and_machine_vision},
-\cite{HARTLEY:Multiple_view_geometry},
-\cite{SHAPIRO:Computer_vision},
-\cite{TRUCCO:Introductory}.
+The same numerical method may therefore assume significantly different
+computational structures depending on the programming paradigm adopted.
+Programming paradigms provide different mechanisms for expressing computation,
+state, control flow, and abstraction. In imperative programming, algorithms are
+typically described as sequences of instructions that explicitly modify the
+state of a program. Mutable variables, conditional statements, and iterative
+control structures are therefore natural mechanisms for representing
+iterative numerical procedures
+\cite{scott2015programming,kernighan1988c}.
+
+Functional programming, in contrast, emphasizes the evaluation and composition
+of functions rather than the explicit modification of program state. Concepts
+such as immutability, recursion, higher-order functions, and function
+composition provide alternative ways of expressing computational processes.
+Functional programming has also been associated with modularity and with the
+ability to decompose programs through higher-order functions and lazy
+evaluation
+\cite{hughes1989functional}.
+
+This distinction becomes particularly relevant when implementing iterative
+numerical algorithms. Consider, for example, an iterative sequence defined by
+
+\begin{equation}
+    x_{n+1} = g(x_n).
+\end{equation}
+
+In an imperative implementation, this process can naturally be represented by
+repeatedly updating a variable inside a loop. In a functional implementation,
+the same recurrence can be expressed through successive function applications,
+recursive definitions, or transformations over immutable values.
+
+Although these representations describe the same mathematical recurrence,
+their computational implementations can differ in terms of code structure,
+expressiveness, modularity, memory behavior, and execution time. Therefore,
+the choice of programming paradigm is not merely a syntactic decision; it
+also determines how the mathematical algorithm is represented and executed by
+the computer.
+
+This problem is particularly relevant for iterative numerical methods, in
+which the same operation may be performed hundreds, thousands, or millions of
+times. In such cases, differences introduced by the programming language,
+runtime system, compiler optimizations, memory-management strategy, or
+evaluation model may significantly affect the final computational cost.
+
+Another fundamental issue arises from the fact that digital computers cannot,
+in general, represent arbitrary real numbers exactly. Instead, real-valued
+quantities are represented using finite sets of machine numbers, most commonly
+through floating-point arithmetic
+\cite{higham2002accuracy,ieee7542019}.
+
+The IEEE 754 standard defines widely adopted formats and operations for binary
+and decimal floating-point arithmetic, including rules for rounding, exceptional
+values, and arithmetic behavior \cite{ieee7542019}. Because the number of
+available bits is finite, many real numbers cannot be represented exactly and
+must instead be approximated.
+
+For example, a real number $x$ that possesses a finite decimal representation
+may have an infinite binary expansion. When represented using a finite number
+of bits, its stored value can be written conceptually as
+
+\begin{equation}
+    \tilde{x} = x + \delta,
+\end{equation}
+
+where $\delta$ denotes the error introduced by finite-precision representation.
+
+Such errors are especially important in iterative numerical algorithms because
+results produced at one iteration are commonly used as inputs to subsequent
+iterations. As a result, rounding errors can propagate, accumulate, or be
+amplified depending on the numerical properties of the algorithm
+\cite{higham2002accuracy}.
+
+The research presented in this work is therefore situated at the intersection
+of three principal topics: numerical methods, programming paradigms, and
+floating-point arithmetic.
+
+The central research question can be formulated as follows:
+
+\begin{quote}
+\textit{How do different programming paradigms and programming languages
+influence the implementation, computational performance, readability, and
+numerical behavior of algorithms used in numerical methods?}
+\end{quote}
+
+To investigate this question, implementations in C, Python, and Haskell are
+considered. C provides a predominantly imperative programming model, offering
+explicit control over variables, control structures, data representation, and
+memory organization \cite{kernighan1988c}.
+
+Python is a general-purpose programming language widely used in scientific
+computing. Its ecosystem has become particularly important for numerical and
+array-based computation, notably through libraries such as NumPy
+\cite{harris2020array}. Although Python supports multiple programming styles,
+numerical algorithms can naturally be expressed using conventional imperative
+constructs such as loops, assignments, and conditional statements.
+
+Haskell, in contrast, is a purely functional programming language characterized
+by immutable values, first-class functions, higher-order functions, recursion,
+strong static typing, and non-strict evaluation
+\cite{marlow2010haskell,hutton2016programming}. These characteristics make
+Haskell especially suitable for investigating how numerical algorithms can be
+expressed without relying on explicit mutable state.
+
+The use of these three languages allows different representations of the same
+numerical algorithm to be investigated while exposing distinct computational
+models.
+
+Among the numerical algorithms considered in this work are iterative methods
+such as fixed-point iteration and the Newton--Raphson method. Such algorithms
+are particularly suitable for comparisons between programming paradigms
+because their mathematical formulations are based on recursively defined
+sequences of approximations
+\cite{burden2016numerical,chapra2021numerical}.
+
+In fixed-point iteration, for example, the objective is to determine a value
+$x^\ast$ satisfying
+
+\begin{equation}
+    x^\ast = g(x^\ast).
+\end{equation}
+
+Starting from an initial approximation $x_0$, a sequence is generated according
+to
+
+\begin{equation}
+    x_{n+1} = g(x_n),
+\end{equation}
+
+until a prescribed convergence criterion is satisfied.
+
+The convergence of fixed-point iteration depends on mathematical properties of
+the function $g$ and on the initial approximation. Under appropriate
+conditions, the generated sequence converges to a fixed point of the function
+\cite{burden2016numerical}.
+
+This recursive structure highlights one of the central differences between the
+programming paradigms investigated in this work. In an imperative
+implementation, the current approximation may be explicitly updated during
+each loop iteration. In a functional implementation, the sequence may instead
+be described as successive applications of a function without requiring an
+explicitly mutable variable.
+
+The Newton--Raphson method provides another important example. Given a nonlinear
+equation
+
+\begin{equation}
+    f(x)=0,
+\end{equation}
+
+an iterative approximation is obtained using
+
+\begin{equation}
+    x_{n+1}
+    =
+    x_n -
+    \frac{f(x_n)}{f'(x_n)}.
+\end{equation}
+
+Under appropriate regularity assumptions and for sufficiently suitable initial
+approximations, Newton's method can exhibit rapid local convergence
+\cite{burden2016numerical,chapra2021numerical}.
+
+Despite the mathematical equivalence of implementations based on the same
+recurrence relations, their computational characteristics may differ. This
+work does not attempt to establish one programming paradigm as universally
+superior to another. Instead, it investigates quantitatively and qualitatively
+how different implementation models behave in the particular context of
+numerical algorithms.
+
+The quantitative analysis considers metrics such as execution time, memory
+usage, computational resource consumption, number of iterations, and
+implementation size. Whenever applicable, compiler optimization levels and
+language execution models are also taken into account.
+
+Experimental comparisons between programming languages require particular
+care. Differences in execution time cannot necessarily be attributed to the
+programming paradigm alone, since performance is also influenced by compiler
+technology, runtime implementation, optimization strategies, memory
+management, data representation, and hardware architecture.
+
+For this reason, the experiments presented in this work are conducted under
+controlled conditions, using the same hardware platform and equivalent testing
+conditions whenever possible. Different test functions and computational
+scenarios are employed to examine the behavior of the implementations under
+varying levels of numerical and computational complexity.
+
+In addition to quantitative metrics, qualitative characteristics are examined,
+including readability, modularity, expressiveness, maintainability, and the
+degree of correspondence between the mathematical formulation of an algorithm
+and its source-code representation.
+
+Functional programming is particularly interesting in this context because
+higher-order functions and abstraction mechanisms can improve program
+modularity and permit mathematical operations to be represented compositionally
+\cite{hughes1989functional}. However, properties such as recursion and lazy
+evaluation may also result in execution and memory behaviors that differ from
+those encountered in conventional imperative implementations.
+
+A further component of this research concerns floating-point arithmetic.
+Numerical algorithms are executed using finite computational representations,
+which means that mathematical operations over real numbers are replaced by
+operations over a finite subset of representable values. The consequences of
+this approximation include rounding error, loss of significance, cancellation,
+underflow, overflow, and other finite-precision effects
+\cite{higham2002accuracy,ieee7542019}.
+
+These effects are fundamental when interpreting the experimental results.
+Differences between implementations must therefore not be analyzed solely in
+terms of execution speed, but also with respect to the numerical behavior of
+the algorithms and the arithmetic used by the underlying computational system.
+
+The general objective of this work is to analyze the relationship between
+programming paradigms and numerical methods, evaluating how different
+implementation strategies influence both computational and numerical
+properties of the algorithms.
+
+The specific objectives are:
+
+\begin{itemize}
+    \item to study the mathematical foundations of the numerical methods
+    considered in this work;
+
+    \item to implement numerical algorithms using C, Python, and Haskell;
+
+    \item to represent equivalent numerical methods using imperative and
+    functional programming approaches;
+
+    \item to compare the implementations in terms of execution time, memory
+    consumption, and computational resource usage;
+
+    \item to analyze differences in readability, modularity, and expressiveness
+    among the implementations;
+
+    \item to investigate the relationship between recursion, iterative control
+    structures, and computational performance;
+
+    \item to study the effects of floating-point representation on numerical
+    algorithms;
+
+    \item to investigate the propagation of representation and rounding errors
+    throughout iterative numerical processes;
+
+    \item to identify advantages and limitations associated with imperative and
+    functional programming approaches in the implementation of numerical
+    methods.
+\end{itemize}
+
+By combining these perspectives, this research aims to provide an analysis
+that extends beyond a direct comparison of programming languages. The broader
+objective is to understand how different computational models interact with
+the mathematical characteristics of numerical algorithms and how those
+interactions affect performance, implementation structure, and numerical
+reliability.
