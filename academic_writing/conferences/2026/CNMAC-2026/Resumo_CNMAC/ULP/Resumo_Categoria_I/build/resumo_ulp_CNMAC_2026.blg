@@ -1,0 +1,15 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'build/resumo_ulp_CNMAC_2026.blg'
+[116] biber-MSWIN64:342> INFO - === 
+[156] Biber.pm:421> INFO - Reading 'build/resumo_ulp_CNMAC_2026.bcf'
+[285] Biber.pm:1002> INFO - Found 4 citekeys in bib section 0
+[301] Biber.pm:4487> INFO - Processing section 0
+[312] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
+[371] bibtex.pm:1713> INFO - LaTeX decoding ...
+[381] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[456] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[456] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[456] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[456] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[464] bbl.pm:676> INFO - Writing 'build/resumo_ulp_CNMAC_2026.bbl' with encoding 'UTF-8'
+[466] bbl.pm:779> INFO - Output to build/resumo_ulp_CNMAC_2026.bbl

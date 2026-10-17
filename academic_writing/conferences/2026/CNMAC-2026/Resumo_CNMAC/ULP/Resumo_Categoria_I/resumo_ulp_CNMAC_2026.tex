@@ -44,6 +44,22 @@
 % ref bibliográficas
 \usepackage[backend=biber, style=numeric-comp, maxnames=50]{biblatex}
 \addbibresource{refs.bib}
+\DeclareFieldFormat{title}{\mkbibquote{#1}}
+
+\DeclareNameAlias{author}{given-family}
+
+% Colocar títulos de artigos e relatórios entre aspas
+\DeclareFieldFormat[article,periodical,incollection,inproceedings,
+  report,techreport,unpublished,misc]
+  {title}{\mkbibquote{#1}}
+
+\DeclareFieldFormat[article,periodical,incollection,inproceedings,
+  report,techreport,unpublished,misc]
+  {citetitle}{\mkbibquote{#1}}
+
+\setlength{\bibitemsep}{3.05pt}
+\setlength{\bibparsep}{0pt}
+
 \DeclareTextFontCommand{\emph}{\boldmath\bfseries}
 \DefineBibliographyStrings{brazil}{phdthesis = {Tese de doutorado}}
 \DefineBibliographyStrings{brazil}{mathesis = {Disserta\c{c}\~{a}o de mestrado}}
@@ -75,9 +91,9 @@
 \title{Análise Visual de Erros de Ponto Flutuante e das \textit{Units of Last Place} em Experimentos Computacionais}
 
 \author{
-{\large Ribas, E. R. L. D.}\thanks{enzorochaeleitedinizribas@gmail.com}\, ,
-{\large D'Afonseca, L. A.}\thanks{luis.dafonseca@gmail.com}\, ,
-{\large Rocha, L. M.}\thanks{lucasmartinsrocha@gmail.com}  \\
+{\large Enzo R. L. D. Ribas}\thanks{enzorochaleitedinizribas@gmail.com}\, ,
+{\large Luis A. D'Afonseca}\thanks{luis.dafonseca@gmail.com}\, ,
+{\large Lucas M. Rocha}\thanks{lucasmartinsrocha@gmail.com}  \\
 {\small CEFET-MG, Belo Horizonte, MG} \\
 }
 \criartitulo
@@ -88,7 +104,7 @@
 
 Este trabalho apresenta resultados de estudos realizados em um projeto de
 iniciação científica e tem como objetivo explorar graficamente alguns efeitos
-do cálculos realizados com ponto flutuante e das Unidades de Última Posição
+dos cálculos realizados com ponto flutuante e das Unidades de Última Posição
 (\textit{Units of Last Place}).
 
 Um Sistema de Ponto Flutuante (SPF) é a maneira utilizada para aproximar
@@ -110,7 +126,7 @@ representado em ponto flutuante em computadores é então calculado como
 \end{equation}
 onde $s$ é o \textit{bit} de sinal, $d_i$ são os dígitos significativos, $p$ é o expoente, $\beta$ é a base e $t$ é o número de dígitos significativos. O expoente é armazenado com um viés (\textit{bias}), ou seja, o valor real do expoente é calculado como $P = p + \textit{bias} $, onde $P$ é o valor armazenado e \textit{bias} é um valor constante que depende do formato de precisão utilizado. O sistema para 64 \textit{bits}, utilizado na maioria dos computadores atuais, é definido por $\beta = 2$, $t = 53$, $L = -1022$, $U = 1023$ e $\textit{bias} = 1023$ em que $L$ e $U$ são os limites inferior e superior do expoente, respectivamente.
 
-O padrão definido pela IEEE-754~\cite{IEEE754} formaliza essa arquitetura,
+O padrão definido pela IEEE 754~\cite{IEEE754} formaliza essa arquitetura,
 alocando \textit{bits} para sinal, expoente e mantissa em precisões simples (32
 \textit{bits}) e dupla (64 \textit{bits}), como representado na
 equação~\eqref{eq:spf}.
@@ -123,6 +139,8 @@ equação~\eqref{eq:spf}.
     \vspace{-.5cm}
 \end{figure}
 
+\vspace{-.01cm}
+
 A \textit{Unit of Last Place (ULP)} é a menor diferença entre dois números
 representáveis em ponto flutuante, ou seja, a distância entre um número e o
 próximo número representável~\cite{muller2005,kahan2004}. O conjunto de números
@@ -131,7 +149,7 @@ erro relativo. Dessa forma, a ULP se torna uma medida relativa importante para
 avaliar a precisão dos cálculos realizados com ponto flutuante, podendo ser
 calculada como
 \begin{equation}
-    \ulp(x) = \beta^{p - t + 1},
+    \ulp(x) = \beta^{p - t + 1}.
     \label{eq:ulp}
 \end{equation}
 
@@ -151,7 +169,7 @@ Entre $4,9$ e $5,1$ observamos a ocorrência de uma oscilação caótica
 relacionada com o valor da $\ulp(x^{23})$, que é 2. Para realizar a soma
 $x^{23} + 1$, o SPF precisa representar os dois números na mesma potência.
 Porém, o valor do expoente necessário para representar $x^{23}$ está associado
-à uma ULP igual a 2, em que o número 1 não pode ser representado e precisa ser
+a uma ULP igual a 2, em que o número 1 não pode ser representado e precisa ser
 arredondado. Esse arredondamento faz com que $x^{23} + 1$ seja igual a $x^{23}$
 ou $x^{23} + 2$, produzindo a oscilação observada.
 
@@ -164,15 +182,18 @@ ou $x^{23} + 2$, produzindo a oscilação observada.
     \label{fig:erros1}
 \end{figure}
 
+\vspace{-.4cm}
+
 O fenômeno observado destaca a importância do conhecimento sobre o sistema
 utilizado por máquinas ao realizar cálculos que necessitam de precisão, como os
-comumente utilizados por métodos númericos (vide~\cite{ruggiero1998calculo}).
+comumente utilizados por métodos numéricos (vide~\cite{ruggiero1998calculo}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REFS BIBLIOGRÁFICAS
 % POR FAVOR, NÃO ALTERAR
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \nocite{*}
+\vspace{-.4cm}
 \printbibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

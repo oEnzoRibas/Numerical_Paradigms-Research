@@ -1,0 +1,166 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{IEEE754}{standard}{}{}
+      \name{author}{1}{}{%
+        {{hash=6b600542ba3d4a21aea8e7d8ee988932}{%
+           family={{IEEE Computer Society}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Piscataway, NJ}%
+      }
+      \list{organization}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{fullhash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{fullhashraw}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{bibnamehash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{authorbibnamehash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{authornamehash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{authorfullhash}{6b600542ba3d4a21aea8e7d8ee988932}
+      \strng{authorfullhashraw}{6b600542ba3d4a21aea8e7d8ee988932}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-5044-5924-2}
+      \field{number}{IEEE Std 754-2019}
+      \field{title}{IEEE Standard for Floating-Point Arithmetic}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1109/IEEESTD.2019.8766229
+      \endverb
+    \endentry
+    \entry{kahan2004}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a5e6aab28c90e5493de4671e6e61d5a8}{%
+           family={Kahan},
+           familyi={K\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{fullhash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{fullhashraw}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{bibnamehash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{authorbibnamehash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{authornamehash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{authorfullhash}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \strng{authorfullhashraw}{a5e6aab28c90e5493de4671e6e61d5a8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Unpublished note}
+      \field{title}{A logarithm too clever by half}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb http://www.cs.berkeley.edu/~wkahan/LOG10HAF.TXT
+      \endverb
+      \verb{url}
+      \verb http://www.cs.berkeley.edu/~wkahan/LOG10HAF.TXT
+      \endverb
+    \endentry
+    \entry{muller2005}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=e37e1ca37e451b9d4dca83fe771fab51}{%
+           family={Muller},
+           familyi={M\bibinitperiod},
+           given={J.-M.},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {INRIA}%
+        {Laboratoire de l'Informatique du Parallélisme}%
+      }
+      \list{location}{1}{%
+        {Lyon, France}%
+      }
+      \strng{namehash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{fullhash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{fullhashraw}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{bibnamehash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{authorbibnamehash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{authornamehash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{authorfullhash}{e37e1ca37e451b9d4dca83fe771fab51}
+      \strng{authorfullhashraw}{e37e1ca37e451b9d4dca83fe771fab51}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{ISSN: 0249-6399}
+      \field{issn}{0249-6399}
+      \field{number}{RR-5504; LIP RR-2005-09}
+      \field{title}{On the definition of ulp(x)}
+      \field{type}{Research Report}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://inria.hal.science/inria-00070503
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/inria-00070503
+      \endverb
+    \endentry
+    \entry{ruggiero1998calculo}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=07adfb0f4c180bd7c517c349ab6c447a}{%
+           family={Ruggiero},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi G.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=297647a6a44543bb240ecc92ed7223ae}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={V.\bibnamedelimi L.\bibnamedelimi R.},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Makron Books}%
+      }
+      \strng{namehash}{682eb370fafddd62e59cab08293f876c}
+      \strng{fullhash}{682eb370fafddd62e59cab08293f876c}
+      \strng{fullhashraw}{682eb370fafddd62e59cab08293f876c}
+      \strng{bibnamehash}{682eb370fafddd62e59cab08293f876c}
+      \strng{authorbibnamehash}{682eb370fafddd62e59cab08293f876c}
+      \strng{authornamehash}{682eb370fafddd62e59cab08293f876c}
+      \strng{authorfullhash}{682eb370fafddd62e59cab08293f876c}
+      \strng{authorfullhashraw}{682eb370fafddd62e59cab08293f876c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{85-346-0204-2}
+      \field{title}{Cálculo numérico: aspectos teóricos e computacionais}
+      \field{year}{1998}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

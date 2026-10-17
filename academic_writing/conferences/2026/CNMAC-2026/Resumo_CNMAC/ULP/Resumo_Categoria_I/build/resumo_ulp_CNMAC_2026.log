@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.22)  20 AUG 2026 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.22)  17 OCT 2026 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"f:/Users/Enzo HD/Github/Repos/ACML/Numerical_Paradigms-Research/Academic_Writing/Congressos/CNMAC-2026/2026/Resumo_CNMAC/ULP/Resumo_Categoria_I/resumo_ulp_CNMAC_2026.tex"
-(f:/Users/Enzo HD/Github/Repos/ACML/Numerical_Paradigms-Research/Academic_Writing/Congressos/CNMAC-2026/2026/Resumo_CNMAC/ULP/Resumo_Categoria_I/resumo_ulp_CNMAC_2026.tex
+**f:/Users/EHD/Github/ACML/Numerical_Paradigms-Research/academic_writing/conferences/2026/CNMAC-2026/Resumo_CNMAC/ULP/Resumo_Categoria_I/resumo_ulp_CNMAC_2026.tex
+(f:/Users/EHD/Github/ACML/Numerical_Paradigms-Research/academic_writing/conferences/2026/CNMAC-2026/Resumo_CNMAC/ULP/Resumo_Categoria_I/resumo_ulp_CNMAC_2026.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (pssbmac.cls
@@ -468,7 +468,7 @@ Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-LaTeX Info: Redefining \emph on input line 47.
+LaTeX Info: Redefining \emph on input line 63.
  (C:\Users\maria\AppData\Local\Programs\MiKTeX\tex/latex/was\icomma.sty
 Package: icomma 2002/03/10 v2.0 (WaS)
 )
@@ -476,26 +476,26 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazilian'.
- (f:/Users\Enzo HD\Github\Repos\ACML\Numerical_Paradigms-Research\Academic_Writing\Congressos\CNMAC-2026\2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.aux
+ (f:\Users\EHD\Github\ACML\Numerical_Paradigms-Research\academic_writing\conferences\2026\CNMAC-2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.aux
 Package babel Info: 'brazilian' activates 'portuges' shorthands.
 (babel)             Reported on input line 12.
 )
 \openout1 = `resumo_ulp_CNMAC_2026.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
  (C:\Users\maria\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count448
@@ -527,38 +527,26 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'resumo_ulp_CNMAC_2026.bbl' found.
- (f:/Users\Enzo HD\Github\Repos\ACML\Numerical_Paradigms-Research\Academic_Writing\Congressos\CNMAC-2026\2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.bbl)
-Package biblatex Info: Reference section=0 on input line 69.
-Package biblatex Info: Reference segment=0 on input line 69.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+ (f:\Users\EHD\Github\ACML\Numerical_Paradigms-Research\academic_writing\conferences\2026\CNMAC-2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.bbl)
+Package biblatex Info: Reference section=0 on input line 85.
+Package biblatex Info: Reference segment=0 on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
  (C:\Users\maria\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
  (C:\Users\maria\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
 
  []
-
-
-LaTeX Warning: Citation 'IEEE754' on page 1 undefined on input line 113.
 
 <images/ulp2.png, id=1, 671.3883pt x 304.9794pt>
 File: images/ulp2.png Graphic file (type png)
 <use images/ulp2.png>
-Package pdftex.def Info: images/ulp2.png  used on input line 120.
+Package pdftex.def Info: images/ulp2.png  used on input line 136.
 (pdftex.def)             Requested size: 341.43436pt x 155.09534pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation 'muller2005' on page 1 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'kahan2004' on page 1 undefined on input line 128.
-
 
 Overfull \hbox (2.22168pt too wide) has occurred while \output is active
 $[]$ 
@@ -566,49 +554,38 @@ $[]$
 
 [1{C:/Users/maria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
-]
-<images/erro1.png, id=24, 674.2791pt x 303.534pt>
+ <./images/ulp2.png>]
+<images/erro1.png, id=28, 674.2791pt x 303.534pt>
 File: images/erro1.png Graphic file (type png)
 <use images/erro1.png>
-Package pdftex.def Info: images/erro1.png  used on input line 160.
+Package pdftex.def Info: images/erro1.png  used on input line 178.
 (pdftex.def)             Requested size: 341.43436pt x 153.7026pt.
 
 
-LaTeX Warning: Citation 'ruggiero1998calculo' on page 2 undefined on input line 169.
+Package biblatex Warning: No driver for 'standard'.
+(biblatex)                Using fallback driver on input line 197.
 
-
-LaTeX Warning: Empty bibliography on input line 176.
-
-[2 <./images/ulp2.png> <./images/erro1.png>] (f:/Users\Enzo HD\Github\Repos\ACML\Numerical_Paradigms-Research\Academic_Writing\Congressos\CNMAC-2026\2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.aux)
+[2 <./images/erro1.png>] (f:\Users\EHD\Github\ACML\Numerical_Paradigms-Research\academic_writing\conferences\2026\CNMAC-2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                resumo_ulp_CNMAC_2026
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'resumo_ulp_CNMAC_2026.run.xml'.
 \openout1 = `resumo_ulp_CNMAC_2026.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13170 strings out of 467870
- 242865 string characters out of 5418355
- 1088061 words of memory out of 5000000
- 41889 multiletter control sequences out of 15000+600000
- 644531 words of font info for 80 fonts, out of 8000000 for 9000
+ 13233 strings out of 467870
+ 244293 string characters out of 5418355
+ 1086307 words of memory out of 5000000
+ 41948 multiletter control sequences out of 15000+600000
+ 647060 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,8n,66p,856b,1651s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1728.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "f:/Users\Enzo HD\Github\Repos\ACML\Numerical_Paradigms-Research\Academic_Writing\Congressos\CNMAC-2026\2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.pdf" (2 pages, 407871 bytes).
+ 63i,9n,66p,845b,1645s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1728.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\maria\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/maria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on f:\Users\EHD\Github\ACML\Numerical_Paradigms-Research\academic_writing\conferences\2026\CNMAC-2026\Resumo_CNMAC\ULP\Resumo_Categoria_I\build\resumo_ulp_CNMAC_2026.pdf (2 pages, 433247 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
+ 428 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
