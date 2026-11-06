@@ -1,0 +1,45 @@
+\documentclass[fleqn]{ic-relatorio}
+\usepackage{relatorio}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+\addbibresource{refs.bib}
+
+\title{ULP Transitions, Rounding, and Absorption in $(x^{10}+c)-x^{10}$: A Study of IEEE 754 Binary32 and Binary64}
+\autor{Enzo Rocha Leite Diniz Ribas}
+\date{\today}
+\orientador{Lucas Martins Rocha}
+\coorientador{Luis Alberto D'Afonseca}
+
+
+\newcommand{\fl}{\operatorname{fl}}
+\newcommand{\ulp}{\operatorname{ulp}}
+\newcommand{\rnd}{\operatorname{RN}}
+\newcommand{\nuval}{\nu(c)}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{remark}[proposition]{Remark}
+\newtheorem{lemma}[proposition]{Lemma}
+\setlength{\emergencystretch}{2em}
+
+
+
+\begin{document}
+\include{chapters/abstract/abstract}
+\include{chapters/introduction/introduction}
+\include{chapters/theoretical_framework/theoretical_framework}
+\include{chapters/implementation/implementation}
+\include{chapters/scientific_productions/scientific_productions}
+\include{chapters/discussion/discussion}
+\include{chapters/conclusion/conclusion}
+\printbibliography
+\appendix
+\include{chapters/appendix/reproducibility}
+\end{document}

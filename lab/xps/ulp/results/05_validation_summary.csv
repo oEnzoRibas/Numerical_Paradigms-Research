@@ -1,0 +1,7 @@
+dtype,family,passed,cases,checked,crossing_exclusions,y_lt_c_exclusions
+float64,odd integers,1001,1001,20988000,0,0
+float64,dyadic fractions,300,300,4081500,0,0
+float64,non-dyadic examples,310,310,24950331,522669,0
+float32,odd integers,1001,1001,20987428,564,0
+float32,dyadic fractions,300,300,4081483,14,0
+float32,non-dyadic examples,310,310,11427122,514371,0

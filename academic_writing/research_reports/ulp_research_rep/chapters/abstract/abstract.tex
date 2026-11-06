@@ -1,0 +1,9 @@
+\begin{Abstract}
+In exact arithmetic, the expression $(x^{10}+c)-x^{10}$ is identically equal to $c$. In finite-precision binary arithmetic, however, its computed value displays a sequence of plateaus, parity-dependent rounding ties, and eventually complete absorption of the increment. This report investigates that behavior in IEEE 754 \code{binary32} and \code{binary64}, using the supplied research manuscript, extended book draft, experimental report, notebook, and interactive graphics. Writing $y=\fl(x^{10})$, $u=\ulp(y)$, and $c=m2^{\nu}$ for odd $m$, the nearest-grid model predicts an initial inexact binade at $E_1=p+\nu$ and the last potentially nonzero binade at $E_2=p+\lfloor\log_2 c\rfloor$, where $p$ is significand precision. Consequently, the predicted inexact interval in $x$ is approximately $[2^{(p+\nu)/10},\,2^{(p+1+\lfloor\log_2 c\rfloor)/10})$ and spans $L=\lfloor\log_2 c\rfloor-\nu+1$ binades. The model is established under explicit assumptions about rounding, reuse of the computed power, and binade boundaries. Results reported in the supplied study cover 1,611 values of $c$ in each precision and distinguish powers of two, odd integers, dyadic fractions, and non-dyadic decimal or reciprocal inputs. Reconstructed visualizations and an independently checked 780-case power-of-two grid illustrate when increments are preserved, rounded, or absorbed. Special attention is given to boundary effects, input representation, the relation to Fast2Sum, and limitations of the model.
+
+\Keywords IEEE 754; floating-point arithmetic; unit in the last place; rounding to nearest; cancellation; absorption; binary32; binary64; numerical reproducibility.
+\end{Abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables

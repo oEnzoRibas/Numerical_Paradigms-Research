@@ -1,0 +1,12 @@
+The original files were executed in the OpenAI Python environment on 2026-11-06.
+Command: python /mnt/data/_run_ulp_nb.py (equivalent to python run_all_notebooks.py).
+The notebook cells save the exact executed outputs and the validator records outcomes for each pair (dtype,c).
+Random generator: numpy.default_rng(42) for input generation and validation; separate seed 2026 for plotting samples.
+Numerical backend: NumPy arrays, np.power, np.add, np.subtract with dtype=np.float64 / np.float32.
+Float32 operations are prevented from being silently promoted to float64 during evaluation.
+Python: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+NumPy: 2.3.5
+pandas: 2.2.3
+Matplotlib: 3.10.8
+nbformat: 5.10.4
+nbclient: 0.10.4

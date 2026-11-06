@@ -1,0 +1,19 @@
+\chapter{Reproducibility and Source Notes}\label{app:rep}
+
+\section{Generating the figures}
+From the directory containing \code{func\_nummet\_report.tex}, run:
+\begin{verbatim}
+python -m pip install numpy matplotlib
+python scripts/generate_figures.py
+latexmk -pdf -interaction=nonstopmode func_nummet_report.tex
+\end{verbatim}
+The plotting script regenerates all nine English-language PNG files in \code{figs/}. The original experiments represented in the supplied source documents used NumPy and, for the interactive charts, Plotly. An English-commented adaptation of the source validation code is available at \code{scripts/source_validation/validate.py}; its full run is considerably more demanding than figure generation.
+
+\section{Source-material inventory}
+The supplied inputs comprised one LaTeX template archive; an extended Portuguese-language manuscript and corresponding source archive; an eight-page research article; a seven-page preliminary experimental report; a Jupyter notebook; and four interactive Plotly HTML visualizations (power-of-two grid, continuous power-of-two curves, odd integers, and odd reciprocals). The current document is an English synthesis of those supplied materials; it is not a verified independent replication of every experiment in the manuscript.
+
+\section{Source attribution and publication status}
+The supplied main article and book draft identify Lucas Martins Rocha as their author, and this report retains that attribution. The notebook originally extends material attributed in the supplied research manuscript to E.~R.~L.~D.~Ribas, \code{numError01}, under an MIT license. The template did not provide a verified supervisor or institutional affiliation for the author of the new report. Accordingly, no supervisor was inferred. The provided class and cover design are retained as a layout template; any institution-specific branding should be confirmed before external publication.
+
+\section{Assumptions checklist}
+The theoretical results should be applied only after checking: (i) finite positive stored $c$; (ii) normal finite values and no exception-producing overflow/underflow; (iii) round-to-nearest, ties-to-even; (iv) a single stored value of $y$ reused; (v) no fused or extended-precision rearrangement; and, for the nearest-grid formula as stated, (vi) $y\ge c$ and $y+c<2^{E+1}$. If these conditions are not met, the source manuscript analyzes some cases separately and identifies others as open.

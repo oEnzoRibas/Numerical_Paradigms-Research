@@ -1,0 +1,28 @@
+\chapter{Discussion and Limitations}\label{ch:discussion}
+
+\section{Why a small ULP error can be a large relative error}
+The nearest-grid result contains an important numerical distinction. Equation~\eqref{eq:eps} limits the addition's rounding error to $u/2$ in the interior of a binade, but the ULP $u$ belongs to the large quantity $y\approx x^{10}$, not to the small increment $c$. As $x$ increases, $u$ doubles every time $x$ grows by a factor $2^{1/10}\approx1.072$. With $c$ fixed, an error small on the scale of $y$ may be larger than the quantity one is trying to recover. Complete absorption occurs when the stored sum is identical to $y$, so the final subtraction gives exactly zero.
+
+A subtle issue of terminology is that this expression involves both \emph{absorption during addition} and \emph{subtraction of nearby values}. The observed loss can occur even though the subtraction itself is exact. It is therefore more precise to attribute the loss in the model regime to rounding the addition, not to claim that Sterbenz's exact subtraction creates the error. This follows the error-analysis perspective of standard floating-point treatments \cite{goldberg1991floating,higham2002accuracy}.
+
+\section{Binade crossings and the region below \texorpdfstring{$c$}{c}}
+The main proposition assumes $y+c$ is smaller than the next power of two. For the small fraction of inputs very close to that boundary, the sum lands in a binade with twice the spacing; a one-ULP-of-$y$ error bound replaces the interior half-ULP bound. The extended source draft explicitly distinguishes a proved bound from a heuristic for the frequency of this effect. It reports no such crossings among $4\times10^7$ sampled binary64 cases for odd or dyadic increments in the noisy region, 82 occurrences among the corresponding $4\times10^7$ binary32 cases, and approximately $0.3\%$ and $1\%$ for non-dyadic increments in binary64 and binary32, respectively. These reported frequencies are sampling results, not probabilities deduced exactly from the model.
+
+At small $x$ when $y<c$, Sterbenz's criterion may fail. The draft bounds the deviation by $2\ulp(c)$ and reports smaller deviations (at most one ULP of $c$) in the observed samples. Consequently, the familiar summary ``exact, then noisy, then zero'' should be read as a statement about the regular regime $y\ge c$ away from binade crossings; it is not an unconditional theorem for the entire positive real line.
+
+\section{Input conversion and computation order}
+Decimal literals such as \code{0.1} introduce a separate representation error before the experiment starts. In this report, $f-c$ means an error relative to the stored, exactly specified binary value of $c$. The error relative to the ideal real input is the sum of this conversion effect and the subsequent arithmetic effect. Likewise, evaluating $y=x^{10}$ with \code{pow}, repeated multiplication, or exponentiation by squaring can produce slightly different stored values. The nearest-grid reasoning applies to each resulting $y$, but the $x$ positions of transitions may move. The submitted sources do not provide a controlled comparative benchmark of all these evaluation paths; none is invented here.
+
+\section{Connection with Fast2Sum and possible remedies}
+The intermediate result in Fast2Sum has the form
+\begin{equation}
+ s=\fl(y+c),\qquad z=\fl(s-y),\qquad t=\fl(c-z).
+\end{equation}
+Our computed function is exactly $z$ under the same operation order. Error-free transformations such as Fast2Sum and TwoSum use additional operations to represent the residual of a floating-point addition, rather than discard it \cite{dekker1971technique,knuth1997seminumerical}. When the algorithm's hypotheses hold, the pair $(s,t)$ represents the exact sum $y+c$. This connection is already present in classical numerical-arithmetic literature; the supplied study's contribution is to express the intermediate $z$ through $\nu(c)$, $\lambda$, and the $x$-thresholds.
+
+For this \emph{specific} mathematical identity, the best remedy is algebraic: compute $c$ directly, without forming a large intermediate sum and subtracting it back. In less trivial computations, avoiding unnecessary cancellation, retaining a rounding residual when appropriate, and understanding compiler evaluation order are the more general lessons. A comparison of compensated summation methods is suggested by the source draft, but no new experimental claims about those methods are made here.
+
+\section{What is proved, observed, and open}
+The underlying proof rests on representable-grid rounding and the exactness of sufficiently close subtraction. Within the explicitly stated domain, Equations~\eqref{eq:grid}--\eqref{eq:xthreshold} are theoretical consequences; the half-ULP normalized error bound is also proved. The 780-case heatmap and plotted curves are local replications. The broader 1,611-input validation and the rare-crossing frequencies were reported by the supplied research sources.
+
+Further work identified by the source authors includes the behavior for negative $c$, the exact distribution of binade-crossing events, precise bounds in the $y<c$ region, alternative ways of evaluating the power, fused or extended intermediate arithmetic, and extension to other precisions. The research draft also cautions against presenting the threshold notation as a demonstrated novelty without a more complete literature review, since the relevant exact-subtraction and error-free-transformation mechanisms are already established \cite{rocha2026bookdraft}.

@@ -1,0 +1,26 @@
+\chapter{Introduction}\label{ch:intro}
+
+\section{Motivation}
+The mathematical identity
+\begin{equation}\label{eq:real}
+ (x^{10}+c)-x^{10}=c
+\end{equation}
+holds for every real $x$ and $c$. Its evaluation in floating-point arithmetic, however, does not necessarily return $c$. The first addition may round away part or all of the increment, even when the subsequent subtraction is itself exact. As the magnitude of $x^{10}$ grows, the gap between representable numbers grows in discrete steps. This makes Equation~\eqref{eq:real} a compact way to observe rounding, absorption, and cancellation-related loss of information \cite{goldberg1991floating,higham2002accuracy}.
+
+The central quantity is the \emph{unit in the last place} (ULP). Unlike a fixed absolute error tolerance, the ULP changes with the exponent of the stored floating-point number. An increment that is easily represented near one magnitude may lie exactly halfway between two representable results at a larger magnitude, then become too small to change the larger operand at all. The behavior is therefore not accurately described by a single threshold in $x$ for every possible increment $c$.
+
+\section{Research question and aims}
+This report addresses the question: \emph{How do the magnitude and binary bit structure of a positive floating-point increment $c$ determine the first rounding error, the intermediate output values, and complete absorption in $(x^{10}+c)-x^{10}$?}
+
+The specific aims are to describe a common model for four families of increments, connect its thresholds to IEEE 754 precision, present empirical results and figures from the supplied sources, and separate established mathematical statements from experimental observations and still-open questions. The expression is treated as a study of floating-point evaluation rather than as a proposal for a new numerical algorithm.
+
+\section{Contributions and provenance}\label{sec:provenance}
+The manuscript by Rocha dated 4 November 2026 provides a piecewise nearest-grid model, formulas for the two transition thresholds, and results for 1,611 increments in each of two precisions \cite{rocha2026manuscript}. The accompanying extended draft develops proofs, reviews related error-free transformations, and identifies qualifications to the binade-wise description. A separate seven-page experimental report and the \code{ulp.ipynb} notebook supply plots and a focused enumeration of negative powers of two. Four supplied Plotly HTML charts visualize the power-of-two, odd-integer, and fractional cases.
+
+This document reorganizes these materials into an English-language report while preserving the distinction between the published mathematical framework of floating-point rounding and the particular threshold notation used in the supplied project. The figures are regenerated in English from equivalent NumPy experiments; the plotting script is included. The full source files supplied by the author remain the primary evidence for the larger-scale experiments, and large-scale validation counts are reported as source claims rather than as experiments rerun for this report.
+
+\section{Scope and assumptions}
+The analysis principally considers finite, positive, normal operands in IEEE 754 \code{binary32} (precision $p=24$) and \code{binary64} ($p=53$) \cite{ieee7542019}. Operations round to nearest, with ties resolved toward an even least-significant significand bit. The power $x^{10}$ is evaluated once and its stored result $y$ is reused in the addition and subtraction. No fused evaluation, extended-precision intermediate, overflow, or underflow is assumed in the central argument. Most exact statements additionally require $y\ge c$ and require that the exact sum $y+c$ remain within the binade of $y$. These qualifications matter in interpreting early fractional results and samples close to powers of two.
+
+\section{Organization}
+Chapter~\ref{ch:theory} introduces floating-point representation and derives the nearest-grid rule and thresholds. Chapter~\ref{ch:method} records the experimental setup and source datasets. Chapter~\ref{ch:results} reports observations, numeric tables, and visualizations. Chapter~\ref{ch:discussion} discusses exceptions, error-free transformations, and practical consequences; Chapter~\ref{ch:conclusion} concludes. Appendix~\ref{app:rep} supplies reproducibility instructions and notes about the source archives.

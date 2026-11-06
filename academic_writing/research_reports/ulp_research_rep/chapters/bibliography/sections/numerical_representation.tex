@@ -1,0 +1,69 @@
+
+\section{Numerical Representation and Floating-Point Arithmetic}
+
+Digital computer systems operate with finite storage and finite numerical
+representations. Consequently, only a finite subset of the real numbers can be
+represented exactly by a computer
+\cite{goldberg1991floating,higham2002accuracy}.
+
+Numerical representation in digital systems is based primarily on positional
+number systems, particularly the binary system. In general, a number in base
+$b$ may be represented by
+
+\begin{equation}
+    x =
+    \sum_{i=m}^{n} d_i b^i,
+\end{equation}
+
+where $d_i$ denotes a digit in the chosen base.
+
+Modern computer systems commonly represent non-integer numerical values using
+floating-point formats. In simplified form, a floating-point number may be
+written as
+
+\begin{equation}
+    x = \pm m \times b^e,
+\end{equation}
+
+where $m$ represents the significand, $b$ denotes the numerical base, and $e$
+represents the exponent.
+
+The term \textit{significand} is generally more precise than \textit{mantissa}
+in the context of modern floating-point arithmetic, although both terms are
+frequently encountered in the literature.
+
+Because only a finite number of bits is available for representing these
+components, many real numbers cannot be stored exactly. Instead, the computer
+stores a nearby representable value
+\cite{goldberg1991floating,higham2002accuracy}.
+
+This phenomenon is particularly evident for decimal fractions whose expansions
+do not terminate in binary representation. For example, values such as
+$0.1_{10}$ cannot be represented exactly using a finite binary expansion.
+
+Floating-point arithmetic therefore introduces rounding errors as a natural
+consequence of finite representation. These errors may interact with other
+numerical phenomena, including loss of significance, cancellation, underflow,
+overflow, and propagation of rounding error
+\cite{goldberg1991floating,higham2002accuracy}.
+
+The IEEE 754 standard defines widely adopted floating-point formats and
+operations, including rules for binary and decimal arithmetic, rounding,
+special values such as infinity and NaN, and exceptional numerical conditions
+\cite{ieee7542019}.
+
+In iterative numerical algorithms, finite-precision effects are particularly
+important because the result obtained during one iteration frequently becomes
+the input to the next iteration. Consequently, rounding errors introduced at
+an early stage may propagate throughout the computation.
+
+Depending on the stability and conditioning of the numerical problem, such
+errors may remain small, accumulate, or be amplified during successive
+operations
+\cite{higham2002accuracy}.
+
+The study of floating-point representation is therefore essential for the
+interpretation of the experimental results obtained in this work. Differences
+between implementations should not be evaluated exclusively in terms of
+execution time, but also in terms of numerical behavior and finite-precision
+effects.

@@ -1,0 +1,92 @@
+\section{Numerical Methods}
+
+Numerical analysis studies mathematical and computational techniques designed
+to obtain approximate solutions to mathematical problems. Such techniques are
+particularly important when analytical solutions are unavailable, difficult to
+obtain, or computationally impractical
+\cite{burden2016numerical,chapra2021numerical}.
+
+Classical numerical analysis literature identifies approximation, error,
+convergence, stability, and computational efficiency as fundamental aspects in
+the study and implementation of numerical algorithms
+\cite{burden2016numerical,higham2002accuracy}.
+
+One of the classical problems in numerical analysis is the determination of
+roots of nonlinear equations. Given a function
+
+\begin{equation}
+    f(x) = 0,
+\end{equation}
+
+the objective is to determine a value $x^\ast$ that satisfies the equation, or
+to compute an approximation sufficiently close to an exact root.
+
+Several numerical algorithms may be employed for this purpose, each presenting
+different convergence properties and computational costs. Among the methods
+considered in this work are fixed-point iteration and the Newton--Raphson
+method
+\cite{burden2016numerical,chapra2021numerical}.
+
+Fixed-point iteration begins by transforming the original problem
+
+\begin{equation}
+    f(x) = 0
+\end{equation}
+
+into an equivalent equation of the form
+
+\begin{equation}
+    x = g(x).
+\end{equation}
+
+Starting from an initial approximation $x_0$, a sequence is then constructed
+according to
+
+\begin{equation}
+    x_{n+1} = g(x_n).
+\end{equation}
+
+If appropriate convergence conditions are satisfied, the sequence $\{x_n\}$
+converges to a fixed point $x^\ast$ of the function $g$, satisfying
+
+\begin{equation}
+    g(x^\ast) = x^\ast.
+\end{equation}
+
+The convergence of fixed-point iteration depends on the properties of the
+function $g$, the interval considered, and the initial approximation. A
+frequently used sufficient condition involves the contraction properties of
+$g$ in a neighborhood containing the fixed point
+\cite{burden2016numerical}.
+
+The recursive nature of this expression makes fixed-point iteration
+particularly relevant to the present research. Its mathematical formulation
+can be translated either into explicit iterative structures or into recursive
+function definitions, thereby allowing a direct comparison between imperative
+and functional programming approaches.
+
+Another important method is the Newton--Raphson method. Starting from an
+initial approximation $x_0$, successive approximations are computed using
+
+\begin{equation}
+    x_{n+1}
+    =
+    x_n
+    -
+    \frac{f(x_n)}{f'(x_n)}.
+\end{equation}
+
+Under appropriate assumptions, including sufficient smoothness of the function
+and an initial approximation sufficiently close to a simple root, Newton's
+method exhibits quadratic local convergence
+\cite{burden2016numerical,chapra2021numerical}.
+
+However, its practical behavior also depends on the function under analysis,
+the selected initial approximation, and the numerical evaluation of both the
+function and its derivative.
+
+These methods illustrate a common characteristic of many numerical algorithms:
+the repeated application of a mathematical procedure until a specified
+criterion is satisfied. This property makes iterative numerical methods
+particularly suitable for investigating how different programming models
+represent repeated computation.

@@ -1,0 +1,83 @@
+
+\section{Programming Paradigms}
+
+A programming paradigm may be understood as a conceptual model for organizing
+and expressing computation. Different paradigms provide distinct abstractions
+for representing data, state, operations, and control flow
+\cite{scott2015programming}.
+
+The two principal paradigms considered in this work are imperative programming
+and functional programming.
+
+In the imperative paradigm, a program can be understood as a sequence of
+instructions that modify computational state. Assignments, loops, and
+conditional structures explicitly determine how the state of the program
+changes during execution
+\cite{scott2015programming,kernighan1988c}.
+
+For example, a numerical recurrence
+
+\begin{equation}
+    x_{n+1} = g(x_n)
+\end{equation}
+
+can be implemented by storing the current approximation in a variable and
+successively updating its value during a loop.
+
+This model is closely related to the conventional state-oriented execution
+model of modern processors and is naturally expressed in languages such as C.
+Python also supports extensive use of imperative constructs, although it is a
+multiparadigm language and provides additional abstractions.
+
+Functional programming, in contrast, emphasizes function evaluation and
+composition rather than explicit state modification. Common characteristics
+include immutable values, first-class functions, higher-order functions,
+function composition, and recursive definitions
+\cite{hughes1989functional,hutton2016programming}.
+
+In a functional formulation, the same numerical recurrence may be expressed
+through repeated applications of a function:
+
+\begin{equation}
+    x_1 = g(x_0),
+\end{equation}
+
+\begin{equation}
+    x_2 = g(g(x_0)),
+\end{equation}
+
+\begin{equation}
+    x_3 = g(g(g(x_0))),
+\end{equation}
+
+and, more generally,
+
+\begin{equation}
+    x_n = g^{(n)}(x_0).
+\end{equation}
+
+This representation has a direct relationship with the mathematical
+formulation of iterative methods, since computation may be expressed as
+successive applications and compositions of functions rather than explicit
+modifications of mutable state.
+
+Functional programming also enables the use of higher-order functions, in
+which functions may receive other functions as arguments or return them as
+results. Hughes argues that higher-order functions and lazy evaluation can
+serve as important mechanisms for improving modularity and decomposing programs
+into reusable components
+\cite{hughes1989functional}.
+
+Haskell is one of the principal languages associated with purely functional
+programming. The Haskell language is non-strict and purely functional, and
+functions are first-class values. Its evaluation model allows expressions to
+remain unevaluated until their values are required
+\cite{marlow2010haskell,hutton2016programming}. The official Haskell 2010
+Language Report defines the language and its non-strict semantics
+\cite{marlow2010haskell}.
+
+These properties enable algorithms to be expressed using abstractions that
+differ substantially from conventional imperative implementations. At the
+same time, lazy evaluation and immutable data structures may result in
+execution and memory-access patterns that differ from those of strictly
+evaluated imperative programs.

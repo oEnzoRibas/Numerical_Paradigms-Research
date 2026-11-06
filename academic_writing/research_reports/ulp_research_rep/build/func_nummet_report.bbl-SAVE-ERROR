@@ -1,0 +1,239 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{goldberg1991floating}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d55a57c88a14828a53b9e8db48c889d1}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{fullhash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{fullhashraw}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{bibnamehash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{authorbibnamehash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{authornamehash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{authorfullhash}{d55a57c88a14828a53b9e8db48c889d1}
+      \strng{authorfullhashraw}{d55a57c88a14828a53b9e8db48c889d1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{What Every Computer Scientist Should Know About Floating-Point Arithmetic}
+      \field{volume}{23}
+      \field{year}{1991}
+      \field{pages}{5\bibrangedash 48}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1145/103162.103163
+      \endverb
+    \endentry
+    \entry{higham2002accuracy}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5bec9d02065c9b35d45c881a24f7a1cd}{%
+           family={Higham},
+           familyi={H\bibinitperiod},
+           given={Nicholas\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{fullhash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{fullhashraw}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{bibnamehash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{authorbibnamehash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{authornamehash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{authorfullhash}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \strng{authorfullhashraw}{5bec9d02065c9b35d45c881a24f7a1cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{9780898715217}
+      \field{title}{Accuracy and Stability of Numerical Algorithms}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1137/1.9780898718027
+      \endverb
+    \endentry
+    \entry{rocha2026manuscript}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc8e857aa63fb65cf5b97c0e032d00c5}{%
+           family={Rocha},
+           familyi={R\bibinitperiod},
+           given={Lucas\bibnamedelima Martins},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{fullhash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{fullhashraw}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{bibnamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorbibnamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authornamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorfullhash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorfullhashraw}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Author-supplied manuscript, dated 4 November 2026; originally in Portuguese}
+      \field{title}{ULP in Floating-Point Arithmetic: The Function x to the Tenth plus c Minus x to the Tenth for Odd and Fractional Increments}
+      \field{year}{2026}
+    \endentry
+    \entry{ieee7542019}{misc}{}{}
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{number}{IEEE Std 754-2019}
+      \field{title}{{IEEE Standard for Floating-Point Arithmetic}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1109/IEEESTD.2019.8766229
+      \endverb
+    \endentry
+    \entry{sterbenz1974floating}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a84563e05942653b313b113560077564}{%
+           family={Sterbenz},
+           familyi={S\bibinitperiod},
+           given={Pat\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall}%
+      }
+      \strng{namehash}{a84563e05942653b313b113560077564}
+      \strng{fullhash}{a84563e05942653b313b113560077564}
+      \strng{fullhashraw}{a84563e05942653b313b113560077564}
+      \strng{bibnamehash}{a84563e05942653b313b113560077564}
+      \strng{authorbibnamehash}{a84563e05942653b313b113560077564}
+      \strng{authornamehash}{a84563e05942653b313b113560077564}
+      \strng{authorfullhash}{a84563e05942653b313b113560077564}
+      \strng{authorfullhashraw}{a84563e05942653b313b113560077564}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Floating-Point Computation}
+      \field{year}{1974}
+    \endentry
+    \entry{rocha2026bookdraft}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=fc8e857aa63fb65cf5b97c0e032d00c5}{%
+           family={Rocha},
+           familyi={R\bibinitperiod},
+           given={Lucas\bibnamedelima Martins},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{fullhash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{fullhashraw}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{bibnamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorbibnamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authornamehash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorfullhash}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \strng{authorfullhashraw}{fc8e857aa63fb65cf5b97c0e032d00c5}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Author-supplied extended draft, dated 4 November 2026; originally in Portuguese}
+      \field{title}{Cancellation, Absorption, and ULP in Floating-Point Arithmetic: A Study of the Expression (x to the n plus c) Minus x to the n in Binary32 and Binary64}
+      \field{year}{2026}
+    \endentry
+    \entry{dekker1971technique}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=aecb65ce4747585981576bbd852535fe}{%
+           family={Dekker},
+           familyi={D\bibinitperiod},
+           given={T.\bibnamedelimi J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{aecb65ce4747585981576bbd852535fe}
+      \strng{fullhash}{aecb65ce4747585981576bbd852535fe}
+      \strng{fullhashraw}{aecb65ce4747585981576bbd852535fe}
+      \strng{bibnamehash}{aecb65ce4747585981576bbd852535fe}
+      \strng{authorbibnamehash}{aecb65ce4747585981576bbd852535fe}
+      \strng{authornamehash}{aecb65ce4747585981576bbd852535fe}
+      \strng{authorfullhash}{aecb65ce4747585981576bbd852535fe}
+      \strng{authorfullhashraw}{aecb65ce4747585981576bbd852535fe}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Numerische Mathematik}
+      \field{title}{A Floating-Point Technique for Extending the Available Precision}
+      \field{volume}{18}
+      \field{year}{1971}
+      \field{pages}{224\bibrangedash 242}
+      \range{pages}{19}
+    \endentry
+    \entry{knuth1997seminumerical}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{The Art of Computer Programming, Volume 2: Seminumerical Algorithms}
+      \field{year}{1997}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
